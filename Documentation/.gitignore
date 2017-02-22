@@ -1,0 +1,7 @@
+#LaTeX exclusions throughout the entire repository
+*.aux
+*.gz
+*.lof
+*.out
+*.pdf
+*.toc
