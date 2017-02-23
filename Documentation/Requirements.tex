@@ -72,44 +72,47 @@
 	\subsection{Overview}
 	The remaining sections of this document describes the context of the product, summary of the product’s functions, describes the characteristics of the users, outlines the restrictions of the solution space, lists the factors that affect the requirements, and it describes the software requirements including external interface requirements, functional requirements,  and performance requirements. Section 2 provides an overview of the product. Section 3 provides a detailed description for each of the system interfaces, provides a detailed description of the products functionality, describes all the performance related capabilities of the product and outlines all the restrictions. 
 
-	\section{Functional Requirements}
+	\section{ Specific Requirements }
 	
-	\subsection{List of Functional Requirements:}
+	\subsection{Functional Requirements:}
+	
+	\subsubsection{Functional Requirements List:}
 	
 	\begin{itemize}
-		\item FR1 User Registration - The system should allow the user to create an account using their email and a password. They should also have an option to sign in through another social media account.
+		\item FR1. User Registration - The system should allow the user to create an account using their email and a password. They should also have an option to sign in through another social media account.
 		
-		\item FR2 User Login - Given that the user was able to register the system should allow the user to login. After the first login the system should automatically log the user in.
+		\item FR2. User Login - Given that the user was able to register the system should allow the user to login. After the first login the system should automatically log the user in.
 		
-		\item FR3 User Profile - The system should allow the user to CRUD their profile.
+		\item FR3. User Profile - The system should allow the user to CRUD their profile.
 		
-		\item FR4 User Password - If the user forgets their password the system should allow them to reset it. To reset their password there should be a security check or validation.
+		\item FR4. User Password - If the user forgets their password the system should allow them to reset it. To reset their password there should be a security check or validation.
 		
 		\item FR5. Search - The system should allow the user should be able to search for locations, points of interest and events. The user should also be able to specify the type of location he is searching for, like restaurants or lecture halls.
 		
-		\item FR6 Navigation to Location - The system should allow the user to select a location on the map or from the search results. Once the user has selected a location a route should be calculated based on the user's preferences. The user should then be navigated turn-by-turn to their destination. The user should also be given the directions in a list. If the user locks their phone the directions should be pushed as notifications.
+		\item FR6. - Current Location - The system should provide the user with their current location. The system should also allow the user to share their current location with another user.
 		
-		\item FR7 Heat Maps - The system should display a heat map of campus. While navigating this heat map should continuously be updated. The heat map data should be calculated based on the number of devices connected to Wi-Fi connection points. Data should also be collected via crowdsourcing. 
+		\item FR7. Navigation to Location - The system should allow the user to select a location on the map or from the search results. Once the user has selected a location a route should be calculated based on the user's preferences. The user should then be navigated turn-by-turn to their destination. The user should also be given the directions in a list. If the user locks their phone the directions should be pushed as notifications.
 		
-		\item FR8. Location Information - The system should show the user information of their current location. This information could include history of a building, significance of a point of interest. If there are any activities taking place at that location in the near future the user should be able to see this as well. The system should allow higher level users should be able to CRUD location information. The system should also save a user's favourite locations.
+		\item FR8. Heat Maps - The system should display a heat map of campus. While navigating this heat map should continuously be updated. The heat map data should be calculated based on the number of devices connected to Wi-Fi connection points. Data should also be collected via crowdsourcing. 
 		
-		\item FR9 Location Based Notification - The system should push notifications to users based on their current location. The notification should be given based on the user's interests. The user should also have an option to block notifications for certain locations. 
+		\item FR9. Location Information - The system should show the user information of their current location. This information could include history of a building, significance of a point of interest. If there are any activities taking place at that location in the near future the user should be able to see this as well. The system should allow higher level users should be able to CRUD location information. The system should also save a user's favourite locations.
 		
-		\item FR10 Activities Rewards - The system should keep track of rewards. When a user completes an activity specified by a third party user, the user should be notified that they successfully completed the activity and that they are eligible to receive a reward. The system must also notify the third party who created the reward who has won it.
+		\item FR10. Location Based Notification - The system should push notifications to users based on their current location. The notification should be given based on the user's interests. The user should also have an option to block notifications for certain locations. 
 		
-		\item FR11 Active Rewards - The system should keep track of the user's steps. The user should be rewarded with virtual badges for completing active activities. These virtual badges could be rewarded for the most number steps taken in a week the highest average steps taken in a week. The user should be able to view how far they are from receiving these badges.
+		\item FR11. Activities Rewards - The system should keep track of rewards. When a user completes an activity specified by a third party user, the user should be notified that they successfully completed the activity and that they are eligible to receive a reward. The system must also notify the third party who created the reward who has won it.
 		
-		\item FR12 Events - The system should allow for third party users to create special events that users can participate in. These events include competitions, specials at stores and restaurants, and social events. 
+		\item FR12. Active Rewards - The system should keep track of the user's steps. The user should be rewarded with virtual badges for completing active activities. These virtual badges could be rewarded for the most number steps taken in a week the highest average steps taken in a week. The user should be able to view how far they are from receiving these badges.
+		
+		\item FR13. Events - The system should allow for third party users to create special events that users can participate in. These events include competitions, specials at stores and restaurants, and social events. 
 	\end{itemize}
 	
-	\subsection{List of Use Cases:}
+	\subsubsection{List of Use Cases:}
 	
 	\begin{itemize}
 		\item UC1. Search for Locations - The user enters a search query to search for a location.
 		\item UC2. Search for Locations with a filter - The user chooses a filter then enters his search query.
 		\item UC3. Show Current Location - The user should be shown their current location on a map.
 		\item UC4. Share Location - The user should be able to share their location with another user.
-		
 		\item UC5. Calculate Route Without Traffic - The user should be able to specify for their route to be calculated without traffic.
 		\item UC6. Calculate Quickest Route - The user should be able to specify their route to be the quickest possible route.
 		\item UC7. Navigate to Destination - The user should be given navigation instructions to get to their location.
@@ -117,6 +120,5 @@
 		\item UC9. Show Favourites - The User should be shown a list of their favourite places.
 	\end{itemize}
 	
-	
-	
+
 \end{document}
