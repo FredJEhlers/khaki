@@ -73,7 +73,24 @@
 	\section{Overall Description}
 	
 		\subsection{Product Perspective}
-
+		As our scope given above details the requirements, the system will comprise of several inter-dependent modules viz, Heat map, Points of interest, Push information, Record user preference, Event driven, Navigation to locations/venues, Database, Search locations/venues and lastly (Graphical User Interphase)GUI. Aforementioned are the modules that will collectively form a system of inter-dependent sub-systems with low coupling and high cohesion. Each module will be elaborated in subsection(s) to follow and how they link up with each other to form a system. 
+			\subsubsection{Heat map module}
+			This piece of module will be responsible for statistical computing of number of people/devices active at a certain or across Wi-Fi access point in either two forms (a) stationary participants and (b) on the move participants. The module upon implementation will visualize the concentration of connected devices to the Wi-Fi on GUI and thus tell us the little we want to know about pedestrian traffic.
+			\subsubsection{Points of interest module}
+			Module will retrieve a number of points of interest in the campus that will obviously need to be pre-loaded in the database and/or be loaded by users with special privileges to the database. The module upon implementation will take in a search of string type from a GUI entered by a user who will be searching for points of interest(s) in the campus and display the results if found to the GUI.
+			\subsubsection{Push information module}
+			The module will be designed in a way that it learns what the user prefers that can be either what the user likes searching or the location where the user spends most of his/her time at. This module upon implementation will predict what the user might be interested in based on the historical searches and locations and push that information to the user automatically, reason being for the user to be aware of something similar to what he/she might be interested in.
+			\subsubsection{Record user preference module}
+			This module will be recording top (10-15) frequently looked up (words, characters, numbers or strings) from the user. This module upon implementation will provide a dropdown like list of suggested words or phrases.
+			\subsubsection{Event driven module}
+			Interestingly this module will provide the user with “Did you know” or “Alert” pop ups when connected to the Wi-Fi giving a bit of information that the user wasn’t aware of, or the user did not find from the database. This module upon implementation will make balloon pop ups in the GUI either giving the user tips and information with dates and alerts to keep users away from danger.
+			\subsubsection{Navigation to locations/venues module}
+			What this module does is to pinpoint the longitude and latitude of the user and wait for the final destination location to be entered by the user then that is when the user will be given directions on map reduced to campus scale or direction by text (i.e turn left.. turn right after few meters). This module upon implementation will make use of vector data points to draw navigation line on a map and the user has to follow or make a GUI window filled with text directions in sequence format.
+			\subsubsection{Database module}
+			The module will be mainly used to perform database queries like store, retrieve, delete and update. This module upon implementation will be in the backend accessing the database performing basic adding, retrieving, deleting and updating operations to the database.
+			\subsubsection{Search locations/venues module}
+			Module will be responsible for decoding character types from the GUI and retrieve matching strings from the database together with the information they hold or representing, and even go further to perform (80 percent) character matching mechanism for better search in case the user is not sure about the spelling.
+			
 		\subsection{Product Functions}
 
 		\subsection{User Characteristics}
