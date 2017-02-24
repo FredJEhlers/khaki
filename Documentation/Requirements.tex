@@ -141,7 +141,7 @@
 	    \centering
 	    \makebox[\linewidth]
 	    {
-	        \includegraphics[width=\paperwidth, height=\paperheight]{Images/useCaseDiagrams.png}
+	        \includegraphics[width=200mm, scale=0.5]{Images/useCaseDiagrams.png}
 	    }\\[2cm]
 	    \caption{Use case diagram}
 	\end{figure} 
@@ -399,7 +399,7 @@
 				UC16:User walks past location he will be interested in    &                                     \\ \hline
 				Actor: User                 &           System: App               \\ \hline
 				TUCBW User walking past point of interest & App displays location \\ \hline
-				TUCEW                        &                              \\ \hline
+				TUCEW User walking away from point of interest & \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -411,8 +411,9 @@
 				\hline
 				UC17:Block notifications    &                                     \\ \hline
 				Actor: User                 &  System: Notification               \\ \hline
-				TUCBW                       &                                      \\ \hline
-				TUCEW          &                              \\ \hline
+							    & User receives notification \\ \hline
+				TUCBW User selects "block notifications" option & App dismisses notification\\ \hline
+				TUCEW Particular location added to "blocked" list &                              \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -424,11 +425,8 @@
 				\hline
 				UC18:View location information    &                                     \\ \hline
 				Actor: User                 &           System: App               \\ \hline
-				TUCBW                       &                                      \\ \hline
-				                            & App displays home page              \\ \hline
-				If user clicks login link   & App displays login page.            \\ \hline
-				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
-				TUCEW user sees welcome page          &                              \\ \hline
+				TUCBW user clicks location information link &  \\ \hline
+				TUCEW Location information displayed on screen          &                              \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -439,9 +437,10 @@
 			\begin{tabular}{|l|l|}
 				\hline
 				UC19:CRUD location information    &                                     \\ \hline
-				Actor: User                 &           System: App               \\ \hline
-				TUCBW                       &                                      \\ \hline
-				TUCEW  &                              \\ \hline
+				Actor: High level user                 & System: App               \\ \hline
+							    & Display location information management page \\ \hline
+				TUCBW  Location information management page is loaded &                                      \\ \hline
+				TUCEW High level user CRUD location information  &                              \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -453,11 +452,8 @@
 				\hline
 				UC20:User gets reward    &                                     \\ \hline
 				Actor: User                 &           System: Activities               \\ \hline
-				TUCBW                       &                                      \\ \hline
-				                            & App displays home page              \\ \hline
-				If user clicks login link   & App displays login page.            \\ \hline
-				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
-				TUCEW user sees welcome page          &                              \\ \hline
+				TUCBW User achieves set goal eligible for reward & System grants user eligibility to collect reward\\ \hline
+				TUCEW user collects reward/waits to collect later          &                              \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -485,11 +481,9 @@
 				\hline
 				UC22:CRUD events    &                                     \\ \hline
 				Actor: User                 &           System: App               \\ \hline
-				                            & App displays home page              \\ \hline
-				                            TUCBW                       &                                      \\ \hline
-				If user clicks login link   & App displays login page.            \\ \hline
-				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
-				TUCEW user sees welcome page          &                              \\ \hline
+				                            & Event management page diaplayed \\ \hline
+				TUCBW Third party user sees events management page & \\ \hline
+				TUCEW Third party user CRUD events  & \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -502,8 +496,7 @@
 				UC23:Create event as third party   	&                                     \\ \hline
 				Actor: User                 		&           System: Events               \\ \hline
 				TUCBW "Create event" button is clicked  & Page displayed to capture details  \\ \hline
-				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
-				TUCEW user sees welcome page         	 &                              \\ \hline
+				TUCEW Event added to location details         	 &                              \\ \hline
 			\end{tabular}%
 		}
 	\end{table}
@@ -511,6 +504,7 @@
 	\subsubsection{Traceability Matrix}
 	.
 	\begin{table}[ht!]
+		\caption{Traceability matrix}
 		\centering
 		\label{Trac}
 		\resizebox{\textwidth}{!}{%
