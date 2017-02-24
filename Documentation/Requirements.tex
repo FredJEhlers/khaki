@@ -17,13 +17,13 @@
 }
 
 % define the title
-\author{Team Kahki}
+\author{Team Khaki}
 \title{Requirements Specification}
 
 \begin{document}
 	\setlength{\parskip}{6pt}
 	
-	% generates the title
+	% generates the Cover page
 	\input{CoverPage.tex}
 	
 	\tableofcontents
@@ -82,11 +82,11 @@
 	
 		\subsection{Product Perspective}
 		As our scope given above details the requirements, the system will comprise of several inter-dependent modules viz, Heat map, Points of interest, Push information, Record user preference, Event driven, Navigation to locations/venues, Database, Search locations/venues and lastly (Graphical User Interphase)GUI. Aforementioned are the modules that will collectively form a system of inter-dependent sub-systems with low coupling and high cohesion. Each module will be elaborated in subsection(s) to follow and how they link up with each other to form a system. 
-    \subsubsection{Hardware interrface}
+    \subsubsection{Hardware interface}
 			\paragraph{Minimum Requirements}
       Hard drive space 56MB.
 		
-		\subsubsection{Software interrface}
+		\subsubsection{Software interface}
 			\paragraph{Client on application}
       The client must have Android 4.1 OS,IOS OS 7 and up installed on their phone/tablet, so they can run  NavUP application on their phone
 
@@ -96,7 +96,7 @@
 			\paragraph{Development end}
       We will use Google Android SDK 1.0 to build and deploy the android application.Google Maps will make use of the Google Maps API for custom styling of maps.Our own map grid API to interact with google maps.IDE of choice with Java, XML, AJAX, Javascript, HTML,OS (windows, UNIX).
       
-		\subsubsection{Communication interrface}
+		\subsubsection{Communication interface}
     FTP( File Transfer Protocol)- The NavUp system will FTP to communicate with Google Maps.
     HTTP/HTTPS(Hypertext Transfer Protocol/ Hypertext Transfer Protocol over Secure Socket layer) to communicate with the user
         
@@ -126,13 +126,13 @@
 
       A registered user would typically be a staff member or a student. Someone who’s on campus frequently and they will be 			able to access most of the functionality excluding higher level and third party functionality. So all the guest 			functionality with the added ability to add favourite venues and get rewards based on the amount of steps they’ve taken 		relative to time. They would also receive notifications based on their preferences.
 
-      Third party user will be used for registered user reward givers like stores in and around campus. They will be able to 			indicate what rewards they have available, the system will reward at it’s own discretion and the third party will 			recieve a way to validate which user gets what reward.
+      Third party user will be used for registered user reward givers like stores in and around campus. They will be able to 			indicate what rewards they have available, the system will reward at it’s own discretion and the third party will 			receive a way to validate which user gets what reward.
 
       A higher level user would be an organization like a society, a political party, a faculty or another authorised party. 
       They have Third party user rights with the added ability to add events to the pushed notifications and add new venues 			onto the app.
 
       \subsection{Constraints}
-      The application will not be able to fully function without a connection to the internet Because it will need to extract 		data from the server. An offline user will oonly be able to use a limited number of things.
+      The application will not be able to fully function without a connection to the internet Because it will need to extract 		data from the server. An offline user will only be able to use a limited number of things.
 
       The smart device being used to access the application must have internet connectivity, a GPS 
       System and WiFi.
@@ -163,14 +163,12 @@
 				\includegraphics[width=0.5\linewidth]{Images/userInterface.jpg}\\[0.5cm]
 				
 	\subsubsection{Hardware Interfaces}
-				The NavUp hardware interface will primarily be dependant on the User’s unique device. Either a Tablet, mobile phone, phablet. 	
+				The NavUp hardware interface will primarily be dependent on the User’s unique device. Either a Tablet, mobile phone, phablet. 	
 					
 	\subsubsection{Software Interfaces}
-				The NavUp software  interface will primarily be dependant on the Users device and operating system of that device (IOS, Android , Windows phone). But the general layout for android operating system is depicted in the image bellow:
+				The NavUp software  interface will primarily be dependent on the Users device and operating system of that device (IOS, Android , Windows phone). But the general layout for android operating system is depicted in the image bellow:
 				
 				\includegraphics[width=0.5\linewidth]{Images/software.jpg}\\[0.5cm]
-						
-		\subsection{Functional Requirements:}
 		
 		\subsection{Functional Requirements:}
 		
@@ -256,8 +254,7 @@
 					If user clicks login link           & App displays login page.  \\ \hline
 					If user clicks continue link without logging in     & TUCCW navigation. \\ \hline
 					TUCEW user sees welcome page        &                            \\ \hline
-				\end{tabular}%
-			}
+				\end{tabular}%}
 		\end{table}
 		
 		\begin{table}[ht!]
@@ -286,8 +283,7 @@
 					UC8. Add location to favourites                          & \\ \hline
 					UC9. Show favourite locations                            & \\ \hline
 					UC18. View location details                               & \\ \hline
-				\end{tabular}%
-			}
+				\end{tabular}%}
 		\end{table}
 		
 		\begin{table}[ht!]
@@ -663,7 +659,7 @@
 				\item Reliability 
 					\begin{itemize}
 						\item Our system makes a lot of assumptions in terms of certain resources that will be available along with permission to use them. Such as User permission to access their GPS/Location/WiFi/Accelerometer.
-						\item Our system relies on availability of WiFi accros the campus of the University of Pretoria, that campus has power and or the generators work if there is no power.
+						\item Our system relies on availability of WiFi across the campus of the University of Pretoria, that campus has power and or the generators work if there is no power.
 					\end{itemize}
 				\item Security 
 					\begin{itemize}
@@ -671,9 +667,9 @@
 					\end{itemize}
 				\item Availability
 					\begin{itemize}
-						\item The avaibility is non existant if the user denies all of the permissions. If we do not have access to the device's GPS/Location/WiFi/Accelerometer none of the application's functionality will be able to work.
+						\item The availability is non existent if the user denies all of the permissions. If we do not have access to the device's GPS/Location/WiFi/Accelerometer none of the application's functionality will be able to work.
 						\item Limited availability overall but the main functionality will be achieved with permission to use the user's Location and the user's WiFi.
-						\item Most accurate functionality of the main functions can be achieved with permission to use Location/WiFi and GPS of the device and use the user's permission to send anonmous pings to generate heat maps and use other devices' location to navigate the user.
+						\item Most accurate functionality of the main functions can be achieved with permission to use Location/WiFi and GPS of the device and use the user's permission to send anonymous pings to generate heat maps and use other devices' location to navigate the user.
 					\end{itemize}
 			\end{enumerate}
 	
