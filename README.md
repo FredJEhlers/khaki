@@ -1,6 +1,5 @@
 # khaki
 COS 301 project round 1 - Requirement specification for the NavUP System
-
 Group Khaki Members
 
 15008402 Kulani Bamuza

@@ -26,53 +26,181 @@
 	\input{CoverPage.tex}
 	
 	\tableofcontents
+	
 	\newpage
-		
-	\section{Functional Requirements}
+	\section{Introduction}
+	The introduction of the Software Requirements Specification provides an overview of the entire specification with purpose, scope, definitions, acronyms, abbreviations, references and overview of the SRS. The aim of this document is to define the problem in detail and provide the detailed requirements for NavUP.
 	
-	\section {2 Overview}
+	\subsection{Purpose}
+	The purpose of this SRS document is to provide a detailed description of NavUP by collecting and analyzing the ideas that define the system. This document describes NavUP’s user interface, External Interface, functional, and performance requirements. The document also describes the users of NavUp and its functions. The document helps developers of the NavUp system in software delivery lifecycle processes. 
+
+	\subsection{Scope}
+	The product as mentioned before is called NavUP, nav being an abbreviation for navigation and UP is an acronym for University of Pretoria.
+	The product should be available on all major mobile operating systems to ensure most users can use the product.
+	The basic functionality of the product should be similar to the basic functionalities of navigation systems like Google Maps and Waze. It should be able to provide the user with their current location, it should be able to to search for locations and venues, it should be able to provide the user with navigation to a location or venue, and it should be able to save locations or venues. 
 	
-	\subsection{2.2 Product Function}
-		The application will be able to track a user’s location. The user will search for a venue on campus by room number and 			be directed to that venue based on distance, time and crowd traffic. The app can also add a waypoint if the user wants 			to make a stop before the final destination. The application will also track the user’s steps and notify and reward them 		 through a third party when they reach milestones. NavUP will also provide the ability for higher level users to push 			notifications to users if there are any events that user might be interested in. If the user isn’t interested, they can 		block the notification resulting in the application learning their preferences. 
-
-	\subsection{2.3 User characteristics}
-		There are 4 user profiles available on the application. A guest user who is a user that isn’t a frequent campus visitor. 		 For instance a visitor to a staff member, someone coming for a conference or meeting. This user will only be able to 			access a limited amount of functionality like location services and step counting.  
-
-		A registered user would typically be a staff member or a student. Someone who’s on campus frequently and they will be 			able to access most of the functionality excluding higher level and third party functionality. So all the guest 			functionality with the added ability to add favourite venues and get rewards based on the amount of steps they’ve taken 		relative to time. They would also receive notifications based on their preferences.
-
-		Third party user will be used for registered user reward givers like stores in and around campus. They will be able to 			indicate what rewards they have available, the system will reward at it’s own discretion and the third party will 			recieve a way to validate which user gets what reward.
-		
-		A higher level user would be an organization like a society, a political party, a faculty or another authorised party. 
-		They have Third party user rights with the added ability to add events to the pushed notifications and add new venues 			onto the app.
-
-		\subsection{2.4 Constraints}
-		The application will not be able to fully function without a connection to the internet Because it will need to extract 		data from the server. An offline user will oonly be able to use a limited number of things.
-
-		The smart device being used to access the application must have internet connectivity, a GPS 
-		System and WiFi.
-
-		The application is going to be constrained by the fact that it needs to access the devices’ 
-		GPS system. The fact that there are different devices with different manufacturers, the Interface between the different 		devices will differ.
-
-		\subsection{2.5 Assumptions and dependencies}
-		It is assumed that the applications will be used on either a smartphone or a smart tablet with location services, WiFi 			and mobile data enabled.
-		The device is assumed to have enough memory to handle the application
-		It is also assumed that the accelerometer hardware is installed on the device and well in function.
-		It is assumed that your phone has enough battery to handle the application throughout the day
-		The application’s performance is dependent on that of the device.
-		The accuracy of the step counter is dependent on the device accelerometer.
-		The accuracy of the location tracking is dependent on the device GPS.
-		
-		\section{3 Specific Requirements}
-		
-		\subsection{3.4 Design Constraints}
-		The database has to be able to handle more than 30000 users. The applications is supposed to be designed in such a way 			that it can work with WiFi, GPS and Mobile networks. It should switch between WiFi as necessary.
-
-		The application will need hard drive space on the device. The lack thereof will result in an inability to download. 			Based on research the application should need between 100 - 200 MB of harddrive space. 
-
-		Memory usage will be high because the application will always be running in order to track the user’s steps unless the 			user decides otherwise. The data should not be more than 20MB.
-
-
+	The system must be able to provide the user their location outdoors as well as indoors. GPS will therefore not suffice because the GPS receiver will not be able to receive a signal indoors. The system will therefore only use Wi-Fi and crowdsourcing to determine the user's location.
 	
+	The system should also have different levels of users, users with higher levels should be able to add new locations into the system. These locations can include points of interest, events and activities.
+	
+	The system should be able to give the user information about how busy certain areas of the campus are. This can shown to the user visually through a heat map.
+	
+	The system should also give users notifications based on their current location like points of interest. The system can learn what type of locations the user likes based on their previous locations and suggest them new locations to visit. The system should also record the user's movement data and reward them in a game like fashion. 
+	
+	\subsection{Definitions, Acronyms, and Abbreviations}
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				GPS           & Global Positioning System. Used to determine a location on earth using satelite.                                     \\ \hline
+				Accelerometer & An instrument for measuring the acceleration of a moving or vibrating body.                                          \\ \hline
+				Heat map      & Visual dashboard that shows the concentration of subject of interest (pedestrian traffic) computed statistically.    \\ \hline
+				Wi-Fi         & Wireless Fidelity. A form of wireless network communication.                                                         \\ \hline
+				GUI           & Graphical User Interphase where a user can interact with the system by making inputs, searching and getting outputs. \\ \hline
+
+			    GMD           & Googel Material Design. \\ \hline
+				UX/UI           & User Experience/User Interface. \\ \hline
+				RIL           & Is the android Redirection Interface Layer. \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+
+	\subsection{References}
+	\begin{itemize}
+		\item Higher Specification
+	\end{itemize}
+
+	\subsection{Overview}
+	The remaining sections of this document describes the context of the product, summary of the product’s functions, describes the characteristics of the users, outlines the restrictions of the solution space, lists the factors that affect the requirements, and it describes the software requirements including external interface requirements, functional requirements,  and performance requirements. Section 2 provides an overview of the product. Section 3 provides a detailed description for each of the system interfaces, provides a detailed description of the products functionality, describes all the performance related capabilities of the product and outlines all the restrictions. 
+
+	\section{Overall Description}
+	
+		\subsection{Product Perspective}
+		As our scope given above details the requirements, the system will comprise of several inter-dependent modules viz, Heat map, Points of interest, Push information, Record user preference, Event driven, Navigation to locations/venues, Database, Search locations/venues and lastly (Graphical User Interphase)GUI. Aforementioned are the modules that will collectively form a system of inter-dependent sub-systems with low coupling and high cohesion. Each module will be elaborated in subsection(s) to follow and how they link up with each other to form a system. 
+        
+		\subsection{Product Functions}
+      The application will be able to track a user’s location. The user will search for a venue on campus by room number and 			be directed to that venue based on distance, time and crowd traffic. The app can also add a waypoint if the user wants 			to make a stop before the final destination. The application will also track the user’s steps and notify and reward them 		 through a third party when they reach milestones. NavUP will also provide the ability for higher level users to push 			notifications to users if there are any events that user might be interested in. If the user isn’t interested, they can 		block the notification resulting in the application learning their preferences. 
+			\subsubsection{Heat map module}
+			This piece of module will be responsible for statistical computing of number of people/devices active at a certain or across Wi-Fi access point in either two forms (a) stationary participants and (b) on the move participants. The module upon implementation will visualize the concentration of connected devices to the Wi-Fi on GUI and thus tell us the little we want to know about pedestrian traffic.
+			\subsubsection{Points of interest module}
+			Module will retrieve a number of points of interest in the campus that will obviously need to be pre-loaded in the database and/or be loaded by users with special privileges to the database. The module upon implementation will take in a search of string type from a GUI entered by a user who will be searching for points of interest(s) in the campus and display the results if found to the GUI.
+			\subsubsection{Push information module}
+			The module will be designed in a way that it learns what the user prefers that can be either what the user likes searching or the location where the user spends most of his/her time at. This module upon implementation will predict what the user might be interested in based on the historical searches and locations and push that information to the user automatically, reason being for the user to be aware of something similar to what he/she might be interested in.
+			\subsubsection{Record user preference module}
+			This module will be recording top (10-15) frequently looked up (words, characters, numbers or strings) from the user. This module upon implementation will provide a dropdown like list of suggested words or phrases.
+			\subsubsection{Event driven module}
+			Interestingly this module will provide the user with “Did you know” or “Alert” pop ups when connected to the Wi-Fi giving a bit of information that the user wasn’t aware of, or the user did not find from the database. This module upon implementation will make balloon pop ups in the GUI either giving the user tips and information with dates and alerts to keep users away from danger.
+			\subsubsection{Navigation to locations/venues module}
+			What this module does is to pinpoint the longitude and latitude of the user and wait for the final destination location to be entered by the user then that is when the user will be given directions on map reduced to campus scale or direction by text (i.e turn left.. turn right after few meters). This module upon implementation will make use of vector data points to draw navigation line on a map and the user has to follow or make a GUI window filled with text directions in sequence format.
+			\subsubsection{Database module}
+			The module will be mainly used to perform database queries like store, retrieve, delete and update. This module upon implementation will be in the backend accessing the database performing basic adding, retrieving, deleting and updating operations to the database.
+			\subsubsection{Search locations/venues module}
+			Module will be responsible for decoding character types from the GUI and retrieve matching strings from the database together with the information they hold or representing, and even go further to perform (80 percent) character matching mechanism for better search in case the user is not sure about the spelling.
+			\subsubsection{Graphical User Interface (GUI) module}
+			Module will handle display functionality, input functionality, and output functionality of all the information generated by above given modules. GUI makes it easier for a user to interact with the system in such a way that it will provide a display window for map, buttons to press, search box for a user to type in item(s) to be searched. Module upon implementation will be in graphical format, that supports various operating systems.
+			
+      \subsection{User characteristics}
+      There are 4 user profiles available on the application. A guest user who is a user that isn’t a frequent campus visitor. 		 For instance a visitor to a staff member, someone coming for a conference or meeting. This user will only be able to 			access a limited amount of functionality like location services and step counting.  
+
+      A registered user would typically be a staff member or a student. Someone who’s on campus frequently and they will be 			able to access most of the functionality excluding higher level and third party functionality. So all the guest 			functionality with the added ability to add favourite venues and get rewards based on the amount of steps they’ve taken 		relative to time. They would also receive notifications based on their preferences.
+
+      Third party user will be used for registered user reward givers like stores in and around campus. They will be able to 			indicate what rewards they have available, the system will reward at it’s own discretion and the third party will 			recieve a way to validate which user gets what reward.
+
+      A higher level user would be an organization like a society, a political party, a faculty or another authorised party. 
+      They have Third party user rights with the added ability to add events to the pushed notifications and add new venues 			onto the app.
+
+      \subsection{Constraints}
+      The application will not be able to fully function without a connection to the internet Because it will need to extract 		data from the server. An offline user will oonly be able to use a limited number of things.
+
+      The smart device being used to access the application must have internet connectivity, a GPS 
+      System and WiFi.
+
+      The application is going to be constrained by the fact that it needs to access the devices’ 
+      GPS system. The fact that there are different devices with different manufacturers, the Interface between the different 		devices will differ.
+
+      \subsection{Assumptions and dependencies}
+      It is assumed that the applications will be used on either a smartphone or a smart tablet with location services, WiFi 			and mobile data enabled.
+      The device is assumed to have enough memory to handle the application
+      It is also assumed that the accelerometer hardware is installed on the device and well in function.
+      It is assumed that your phone has enough battery to handle the application throughout the day
+      The application’s performance is dependent on that of the device.
+      The accuracy of the step counter is dependent on the device accelerometer.
+      The accuracy of the location tracking is dependent on the device GPS.
+
+	\section{Specific Requirements}
+	
+		\subsection{External Interface Requirements}
+      	\subsubsection{User interfaces}
+				
+				The NavUp interface will be useful, easy to use and a delightful to interact with. This will enhance the user experience people will have while interacting with it. This will also ensure that value is given to the application.
+				
+				This will be achieved by making use of Google's Material Design (GMD) the elements that have already been placed and created to be used. Each element is set to standards that have many dimensions, and includes different disciplines-such as interaction design, information architecture, visual design, usability and human-computer interaction.
+				
+				The image below shows a prototype of a possible home screen.
+				
+				\includegraphics[width=0.5\linewidth]{Images/userInterface.jpg}\\[0.5cm]
+				
+				\subsubsection{Hardware Interfaces}
+				The NavUp hardware interface will primarily be dependant on the User’s unique device. Either a Tablet, mobile phone, phablet. 	
+					
+				\subsubsection{Software Interfaces}
+				The NavUp software  interface will primarily be dependant on the Users device and operating system of that device (IOS, Android , Windows phone). But the general layout for android operating system is depicted in the image bellow:
+				
+				\includegraphics[width=0.5\linewidth]{Images/software.jpg}\\[0.5cm]
+						
+		\subsection{Functional Requirement}
+
+		\subsection{Performance Requirements}
+			\begin{enumerate}
+				\item Low battery consumption
+					\begin{itemize}
+						\item Since the application uses predominantly Wifi will be priority to minimize impact on the battery of the phone since battery life is high concern of the users.   
+						\item Numerous calls to various functions when navigating the user from point A to point B, thus optimising this functionality will be a great concern since this can become a high impact on the battery, draining it rather fast.
+						\item With the added assumption that the user will grant permission to allow us transmit the device's location in attempt to help the application to navigate the user to locations with no signal for GPS but have WiFi accessibility.
+						\item Heat map generation will require additional request sent from devices to the routers if this is constantly updated it will start impacting the battery heavily.
+					\end{itemize}
+				\item Fast real-time navigation updates
+					\begin{itemize}
+						\item Important aspect of navigating a user is the accuracy of the process. Thus making use of available resource effectively can create an accurate representation and navigation the user to the desired location. The resources that will be used is the Heat Map, other user locations, WiFi and GPS when available.
+					\end{itemize}
+				\item Accurate Step Counting
+					\begin{itemize}
+						\item Awards will be awarded based on steps taken thus the counting must use as much of the resources at its deposal to be as accurate as possible to distinguish between actual walking and people bouncing their legs when seated or swinging their phone around to attempt to fool the system.
+					\end{itemize}
+				\item Accurate location tracking
+					\begin{itemize}
+						\item This is the main promise of the application. Everything will be off and wrong if the location is inaccurate. Thus this performance requirement will be most important.
+					\end{itemize}  
+			\end{enumerate}
+      
+		\subsection{Design Constraints}
+    		The database has to be able to handle more than 30000 users. The applications is supposed to be designed in such a way 			that it can work with WiFi, GPS and Mobile networks. It should switch between WiFi as necessary.
+
+		    The application will need hard drive space on the device. The lack thereof will result in an inability to download. 			Based on research the application should need between 100 - 200 MB of harddrive space. 
+
+		    Memory usage will be high because the application will always be running in order to track the user’s steps unless the 			user decides otherwise. The data should not be more than 20MB.
+
+		\subsection{Software System Attributes}
+			\begin{enumerate}
+				\item Reliability 
+					\begin{itemize}
+						\item Our system makes a lot of assumptions in terms of certain resources that will be available along with permission to use them. Such as User permission to access their GPS/Location/WiFi/Accelerometer.
+						\item Our system relies on availability of WiFi accros the campus of the University of Pretoria, that campus has power and or the generators work if there is no power.
+					\end{itemize}
+				\item Security 
+					\begin{itemize}
+						\item There are four levels of Users with each having similar and different rights. The differences must be sure to authenticate the user trying to execute the function. If the user is not authorised to do so they must be denied access or if they are authorised they must be allowed to continue.
+					\end{itemize}
+				\item Availability
+					\begin{itemize}
+						\item The avaibility is non existant if the user denies all of the permissions. If we do not have access to the device's GPS/Location/WiFi/Accelerometer none of the application's functionality will be able to work.
+						\item Limited availability overall but the main functionality will be achieved with permission to use the user's Location and the user's WiFi.
+						\item Most accurate functionality of the main functions can be achieved with permission to use Location/WiFi and GPS of the device and use the user's permission to send anonmous pings to generate heat maps and use other devices' location to navigate the user.
+					\end{itemize}
+			\end{enumerate}
+		\subsection{Other Requirements}
+
+	\section{Appendixes}
 	
 \end{document}
