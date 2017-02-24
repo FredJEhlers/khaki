@@ -26,9 +26,101 @@
 	\input{CoverPage.tex}
 	
 	\tableofcontents
-	\newpage
-		
-	\section{Functional Requirements}
 	
+	\newpage
+	\section{Introduction}
+	The introduction of the Software Requirements Specification provides an overview of the entire specification with purpose, scope, definitions, acronyms, abbreviations, references and overview of the SRS. The aim of this document is to define the problem in detail and provide the detailed requirements for NavUP.
+	
+	\subsection{Purpose}
+	The purpose of this SRS document is to provide a detailed description of NavUP by collecting and analyzing the ideas that define the system. This document describes NavUP’s user interface, External Interface, functional, and performance requirements. The document also describes the users of NavUp and its functions. The document helps developers of the NavUp system in software delivery lifecycle processes. 
+
+	\subsection{Scope}
+	The product as mentioned before is called NavUP, nav being an abbreviation for navigation and UP is an acronym for University of Pretoria.
+	The product should be available on all major mobile operating systems to ensure most users can use the product.
+	The basic functionality of the product should be similar to the basic functionalities of navigation systems like Google Maps and Waze. It should be able to provide the user with their current location, it should be able to to search for locations and venues, it should be able to provide the user with navigation to a location or venue, and it should be able to save locations or venues. 
+	
+	The system must be able to provide the user their location outdoors as well as indoors. GPS will therefore not suffice because the GPS receiver will not be able to receive a signal indoors. The system will therefore only use Wi-Fi and crowdsourcing to determine the user's location.
+	
+	The system should also have different levels of users, users with higher levels should be able to add new locations into the system. These locations can include points of interest, events and activities.
+	
+	The system should be able to give the user information about how busy certain areas of the campus are. This can shown to the user visually through a heat map.
+	
+	The system should also give users notifications based on their current location like points of interest. The system can learn what type of locations the user likes based on their previous locations and suggest them new locations to visit. The system should also record the user's movement data and reward them in a game like fashion. 
+	
+	\subsection{Definitions, Acronyms, and Abbreviations}
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				GPS           & Global Positioning System. Used to determine a location on earth using satelite.                                     \\ \hline
+				Accelerometer & An instrument for measuring the acceleration of a moving or vibrating body.                                          \\ \hline
+				Heat map      & Visual dashboard that shows the concentration of subject of interest (pedestrian traffic) computed statistically.    \\ \hline
+				Wi-Fi         & Wireless Fidelity. A form of wireless network communication.                                                         \\ \hline
+				GUI           & Graphical User Interphase where a user can interact with the system by making inputs, searching and getting outputs. \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+
+	\subsection{References}
+	\begin{itemize}
+		\item Higher Specification
+	\end{itemize}
+
+	\subsection{Overview}
+	The remaining sections of this document describes the context of the product, summary of the product’s functions, describes the characteristics of the users, outlines the restrictions of the solution space, lists the factors that affect the requirements, and it describes the software requirements including external interface requirements, functional requirements,  and performance requirements. Section 2 provides an overview of the product. Section 3 provides a detailed description for each of the system interfaces, provides a detailed description of the products functionality, describes all the performance related capabilities of the product and outlines all the restrictions. 
+
+	\section{Overall Description}
+	
+		\subsection{Product Perspective}
+		As our scope given above details the requirements, the system will comprise of several inter-dependent modules viz, Heat map, Points of interest, Push information, Record user preference, Event driven, Navigation to locations/venues, Database, Search locations/venues and lastly (Graphical User Interphase)GUI. Aforementioned are the modules that will collectively form a system of inter-dependent sub-systems with low coupling and high cohesion. Each module will be elaborated in subsection(s) to follow and how they link up with each other to form a system. 
+			\subsubsection{Heat map module}
+			This piece of module will be responsible for statistical computing of number of people/devices active at a certain or across Wi-Fi access point in either two forms (a) stationary participants and (b) on the move participants. The module upon implementation will visualize the concentration of connected devices to the Wi-Fi on GUI and thus tell us the little we want to know about pedestrian traffic.
+			\subsubsection{Points of interest module}
+			Module will retrieve a number of points of interest in the campus that will obviously need to be pre-loaded in the database and/or be loaded by users with special privileges to the database. The module upon implementation will take in a search of string type from a GUI entered by a user who will be searching for points of interest(s) in the campus and display the results if found to the GUI.
+			\subsubsection{Push information module}
+			The module will be designed in a way that it learns what the user prefers that can be either what the user likes searching or the location where the user spends most of his/her time at. This module upon implementation will predict what the user might be interested in based on the historical searches and locations and push that information to the user automatically, reason being for the user to be aware of something similar to what he/she might be interested in.
+			\subsubsection{Record user preference module}
+			This module will be recording top (10-15) frequently looked up (words, characters, numbers or strings) from the user. This module upon implementation will provide a dropdown like list of suggested words or phrases.
+			\subsubsection{Event driven module}
+			Interestingly this module will provide the user with “Did you know” or “Alert” pop ups when connected to the Wi-Fi giving a bit of information that the user wasn’t aware of, or the user did not find from the database. This module upon implementation will make balloon pop ups in the GUI either giving the user tips and information with dates and alerts to keep users away from danger.
+			\subsubsection{Navigation to locations/venues module}
+			What this module does is to pinpoint the longitude and latitude of the user and wait for the final destination location to be entered by the user then that is when the user will be given directions on map reduced to campus scale or direction by text (i.e turn left.. turn right after few meters). This module upon implementation will make use of vector data points to draw navigation line on a map and the user has to follow or make a GUI window filled with text directions in sequence format.
+			\subsubsection{Database module}
+			The module will be mainly used to perform database queries like store, retrieve, delete and update. This module upon implementation will be in the backend accessing the database performing basic adding, retrieving, deleting and updating operations to the database.
+			\subsubsection{Search locations/venues module}
+			Module will be responsible for decoding character types from the GUI and retrieve matching strings from the database together with the information they hold or representing, and even go further to perform (80 percent) character matching mechanism for better search in case the user is not sure about the spelling.
+			
+		\subsection{Product Functions}
+
+		\subsection{User Characteristics}
+
+		\subsection{Constraints}
+
+		\subsection{Assumptions and Dependencies}
+
+	\section{Specific Requirements}
+	
+		\subsection{External Interface Requirements}
+
+		\subsection{Functional Requirement}
+
+			\begin{enumerate}
+					\item User1 - The User
+					\begin{itemize}
+						\item stuff here
+					\end{itemize}
+			\end{enumerate}
+		\subsection{Performance Requirements}
+
+		\subsection{Design Constraints}
+
+		\subsection{Software System Attributes}
+
+		\subsection{Other Requirements}
+
+	\section{Appendixes}
+
+
 	
 \end{document}
