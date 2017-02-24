@@ -27,8 +27,50 @@
 	
 	\tableofcontents
 	\newpage
+	\begin{table}[]
+\centering
+\caption{ Definitions, Acronyms, and Abbreviations}
+\label{my-label}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l}
+\hline
+OS          & Operating System:system software that manages computer hardware and software resources                                                                                                                                                                                                         \\ \hline
+IOS         & \multicolumn{1}{l|}{an operating system used for mobile devices manufactured by Apple Inc.}                                                                                                                                                                                                    \\ \hline
+IDE         & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}integrated development environment,is a software application that provides facilities to computer \\ programmers for software development.\end{tabular}}                                                                                        \\ \hline
+MYSQL       & \multicolumn{1}{l|}{is an open source relational database management system.}                                                                                                                                                                                                                  \\ \hline
+API         & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}application programming interface,a set of functions and procedures that allow the creation \\ of applications which access the features or data of an operating system or application.\end{tabular}}                                           \\ \hline
+Database    & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}is a collection of information that is organized so that it can be easily accessed, managed \\ and updated. Data is organized into rows, columns and tables, and it is indexed to make \\ it easier to find relevant information.\end{tabular}} \\ \hline
+Android SDK & \multicolumn{1}{l|}{Android software development kit.}                                                                                                                                                                                                                                         \\ \hline
+Java        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}a general-purpose computer programming language designed to produce programs \\ that will run on any computer system.\end{tabular}}                                                                                                             \\ \hline
+XML         & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}a metalanguage which allows users to define their own customized markup \\ languages, especially in order to display documents on the Internet.\end{tabular}}                                                                                   \\ \hline
+AJAX        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}is a client-side script that communicates to and from a server/database \\ without the need for a postback or a complete page refresh.\end{tabular}}                                                                                            \\ \hline
+HTML        & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Hypertext Markup Language, a standardized system for tagging text files \\ to achieve font, colour, graphic, and hyperlink effects on World Wide Web \\ pages.\end{tabular}}                                                                    \\ \hline
+Javascript  & \multicolumn{1}{l|}{is a high-level, dynamic, and interpreted programming language.}                                                                                                                                                                                                           \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\clearpage
+	
+	\section{Product Perspective}
+	 
+		\subsection{Hardware interrface}
+			\subsubsection{Minimum Requirements}
+Hard drive space 7MB.
 		
-	\section{Functional Requirements}
+		\subsection{Software interrface}
+			\subsubsection{Client on application}
+The client must have Android 4.1 OS,IOS OS 7 and up installed on their phone/tablet, so they can run  NavUP application on their phone
+
+			\subsubsection{Database server}	
+We will use MYSQL to read and write information to our database.
+
+			\subsubsection{Development end}
+We will use Google Android SDK 1.0 to build and deploy the android application.Google Maps will make use of the Google Maps API for custom styling of maps.Our own map grid API to interact with google maps.IDE of choice with Java, XML, AJAX, Javascript, HTML,OS (windows, UNIX).
+		\subsection{Communication interrface}
+FTP( File Transfer Protocol)- The NavUp system will FTP to communicate with Google Maps.
+HTTP/HTTPS(Hypertext Transfer Protocol/ Hypertext Transfer Protocol over Secure Socket layer) to communicate with the user
+
 	
 	
 \end{document}
