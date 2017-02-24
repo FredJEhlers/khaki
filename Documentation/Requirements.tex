@@ -114,11 +114,47 @@
 					\end{itemize}
 			\end{enumerate}
 		\subsection{Performance Requirements}
-
+			\begin{enumerate}
+				\item Low battery consumption
+					\begin{itemize}
+						\item Since the application uses predominantly Wifi will be priority to minimize impact on the battery of the phone since battery life is high concern of the users.   
+						\item Numerous calls to various functions when navigating the user from point A to point B, thus optimising this functionality will be a great concern since this can become a high impact on the battery, draining it rather fast.
+						\item With the added assumption that the user will grant permission to allow us transmit the device's location in attempt to help the application to navigate the user to locations with no signal for GPS but have WiFi accessibility.
+						\item Heat map generation will require additional request sent from devices to the routers if this is constantly updated it will start impacting the battery heavily.
+					\end{itemize}
+				\item Fast real-time navigation updates
+					\begin{itemize}
+						\item Important aspect of navigating a user is the accuracy of the process. Thus making use of available resource effectively can create an accurate representation and navigation the user to the desired location. The resources that will be used is the Heat Map, other user locations, WiFi and GPS when available.
+					\end{itemize}
+				\item Accurate Step Counting
+					\begin{itemize}
+						\item Awards will be awarded based on steps taken thus the counting must use as much of the resources at its deposal to be as accurate as possible to distinguish between actual walking and people bouncing their legs when seated or swinging their phone around to attempt to fool the system.
+					\end{itemize}
+				\item Accurate location tracking
+					\begin{itemize}
+						\item This is the main promise of the application. Everything will be off and wrong if the location is inaccurate. Thus this performance requirement will be most important.
+					\end{itemize}  
+			\end{enumerate}
 		\subsection{Design Constraints}
 
 		\subsection{Software System Attributes}
-
+			\begin{enumerate}
+				\item Reliability 
+					\begin{itemize}
+						\item Our system makes a lot of assumptions in terms of certain resources that will be available along with permission to use them. Such as User permission to access their GPS/Location/WiFi/Accelerometer.
+						\item Our system relies on availability of WiFi accros the campus of the University of Pretoria, that campus has power and or the generators work if there is no power.
+					\end{itemize}
+				\item Security 
+					\begin{itemize}
+						\item There are four levels of Users with each having similar and different rights. The differences must be sure to authenticate the user trying to execute the function. If the user is not authorised to do so they must be denied access or if they are authorised they must be allowed to continue.
+					\end{itemize}
+				\item Availability
+					\begin{itemize}
+						\item The avaibility is non existant if the user denies all of the permissions. If we do not have access to the device's GPS/Location/WiFi/Accelerometer none of the application's functionality will be able to work.
+						\item Limited availability overall but the main functionality will be achieved with permission to use the user's Location and the user's WiFi.
+						\item Most accurate functionality of the main functions can be achieved with permission to use Location/WiFi and GPS of the device and use the user's permission to send anonmous pings to generate heat maps and use other devices' location to navigate the user.
+					\end{itemize}
+			\end{enumerate}
 		\subsection{Other Requirements}
 
 	\section{Appendixes}
