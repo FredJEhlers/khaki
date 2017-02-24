@@ -146,6 +146,368 @@
 	    \caption{Use case diagram}
 	\end{figure} 
 	
+	\subsubsection{Actor system interaction}
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC11:Login                          &                           \\ \hline
+				Actor: User & System: App           & System : Login Service            \\ \hline
+				                                    & App displays home page    \\ \hline
+				If user clicks login link           & App displays login page.  \\ \hline
+				If user clicks continue link without logging in     & TUCCW navigation. \\ \hline
+				TUCEW user sees welcome page        &                            \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:Search for locations    &                                     \\ \hline
+				Actor: User                 & System: Location service            \\ \hline
+				                            & Location service displays map with the following options \\ \hline
+    			TUCBW user either signs in or 
+    			continues without signing in   & App displays map with the following options    \\ \hline
+				                               & Search for location. \\ \hline
+				                               & Perform filtered search for location \\ \hline
+				                               & Show current location \\ \hline
+				                               & Share location \\ \hline
+				                               & Add location to favourites \\ \hline
+				                               & Show favourite locations \\ \hline
+				                               & View location details \\ \hline
+				                               
+				TUCEW one of the following cases
+                Search for location.                                & \\ \hline
+                Perform filtered search for location                & \\ \hline
+                Show current location                               & \\ \hline
+                Share location                                      & \\ \hline
+                Add location to favourites                          & \\ \hline
+                Show favourite locations                            & \\ \hline
+                View location details                               & \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC7:Navigate to destination    &                                     \\ \hline
+				Actor: User                 & System: Navigation            \\ \hline
+				                            & Navigation displays navigation page with the following options \\ \hline
+    			TUCBW User sees navigation page   &                         \\ \hline
+				                                  & Calculate route without traffic.    \\ \hline
+				                                  & Calculate quickest route \\ \hline
+				                               
+				TUCEW one of the following cases
+                Calculate route without traffic. &    \\ \hline
+                Calculate quickest route.        &    \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC5:Calculate route without traffic    &                          \\ \hline
+				Actor: User                 &           System: Navigation        \\ \hline
+				                            &       User has selected destination \\ \hline
+				TUCBW                       &                                      \\ \hline
+				                            & App displays home page              \\ \hline
+				If user clicks calculate route without traffic button & App determines and displays route on map with least traffic.            \\ \hline \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC6:Calculate quickest route    &                                     \\ \hline
+				Actor: User                 &       System: Navigation               \\ \hline
+                                            &       User has selected destination \\ \hline
+				TUCBW User clicks "Calculate route" button after selecting destination & \\ \hline
+				                            & App displays home page              \\ \hline
+				If user clicks calculate quickest route button & App determines and displays quickest route.            \\ \hline \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC3:Show current location   &                                      \\ \hline
+				Actor: User                 &           System: Location service   \\ \hline
+				                            &           Map has finished loading \\ \hline
+				TUCBW user clicks "show current location" button & Location service determines user location\\ \hline
+				                            &           User location and data shown on map     \\ \hline
+				\\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC4:Share location    &                                     \\ \hline
+				Actor: User                 & System: Location service  \\ \hline
+                            				& User is at/selects point of interest \\ \hline
+				TUCBW                       &                                      \\ \hline
+				If user clicks share button & App shares current location with other app users. \\ \hline \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC2:Perform filtered search for location    &                     \\ \hline
+				Actor: User                 & System: Location service            \\ \hline
+				TUCBW search bar is clicked & Filter options are displayed        \\ \hline
+
+				If user clicks on filter button   & App performs search based on filters chosen by user. \\ \hline
+				TUCEW user sees search results & \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC8:Save location to favourites    &                                     \\ \hline
+				Actor: User                 &           System: Location service               \\ \hline
+				                            & User is at/selects point of interest \\ \hline
+				TUCBW "Save location button is pressed" &                          \\ \hline
+				If user clicks save location button   & App adds location to list  \\ \hline
+				TUCEW confirmation dialog appears           &                           \\ \hline
+				                                            & updated favourites list displayed \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC9:Show favourites   			&                                     \\ \hline
+				Actor: User                 		&           System: Location Service       \\ \hline
+				TUCBW "Show favourites button is clicked" & App fetches list of favourites from server \\ \hline
+				TUCEW favourites page displayed          &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	
+	
+
+\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC10:Registration    &                                     \\ \hline
+				Actor: User                 &           System: Login               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				                            & App displays home page              \\ \hline
+				If user clicks login link   & App displays login page.            \\ \hline
+				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
+				TUCEW user sees home page          &                              \\ \hline
+				                                   & User directed to home page
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:Reopen app after closing    &                                   \\ \hline
+				Actor: User                 &           System: App               \\ \hline
+				                            & App currently minimized/in use\\ \hline
+				TUCBW App is reopened       & User signed in automatically  \\ \hline
+				                            & App displays home page              \\ \hline
+				TUCEW user sees home page   &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}	\
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:Navigation when app is closed    &                                     \\ \hline
+				Actor: User                	 &           System: Navigation               \\ \hline
+				                           	 &           App running in background\\ \hline
+				TUCBW app minimized while navigation in process & \\ \hline
+				TUCEW app is reopened/arrival at destination                      &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC14:Password reset    			   &                                     \\ \hline
+				Actor: User                		   & System: Login               \\ \hline
+				TUCBW User clicks "forgot password" button & App displays password retrieval page   \\ \hline
+				                           		   & App displays home page              \\ \hline
+				TUCEW user sees welcome page         	   &                           \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC15:Show traffic    			&                                     \\ \hline
+				Actor: User                 		&           System: Navigation               \\ \hline
+				                           		 & Map already loaded \\ \hline
+				TUCBW "Show traffic option is selected" & fetch traffc data and display as heat map\\ \hline
+				TUCEW user sees traffic data on map      &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:User walks past location he will be interested in    &                                     \\ \hline
+				Actor: User                 &           System: App               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				TUCEW                        &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:Block notifications    &                                     \\ \hline
+				Actor: User                 &  System: Notification               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				TUCEW          &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:View location information    &                                     \\ \hline
+				Actor: User                 &           System: App               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				                            & App displays home page              \\ \hline
+				If user clicks login link   & App displays login page.            \\ \hline
+				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
+				TUCEW user sees welcome page          &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:CRUD location information    &                                     \\ \hline
+				Actor: User                 &           System: App               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				TUCEW  &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:User gets reward    &                                     \\ \hline
+				Actor: User                 &           System: Activities               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				                            & App displays home page              \\ \hline
+				If user clicks login link   & App displays login page.            \\ \hline
+				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
+				TUCEW user sees welcome page          &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:User walks required steps    &                                     \\ \hline
+				Actor: User                 &           System: Activities               \\ \hline
+				TUCBW                       &                                      \\ \hline
+				                            & App displays banner message              \\ \hline
+				If user takes no action wait & App displays login page.            \\ \hline
+				Click banner or open app to retrieve reward & Rewards page displayed. \\ \hline
+				TUCEW banner message disappears after set time & \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC1:CRUD events    &                                     \\ \hline
+				Actor: User                 &           System: App               \\ \hline
+				                            & App displays home page              \\ \hline
+				                            TUCBW                       &                                      \\ \hline
+				If user clicks login link   & App displays login page.            \\ \hline
+				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
+				TUCEW user sees welcome page          &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
+	\begin{table}[]
+		\centering
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|l|l|}
+				\hline
+				UC23:Create event as third party   	&                                     \\ \hline
+				Actor: User                 		&           System: Events               \\ \hline
+				TUCBW "Create event" button is clicked  & Page displayed to capture details  \\ \hline
+				If user clicks continue link without logging in & TUCCW navigation. \\ \hline
+				TUCEW user sees welcome page         	 &                              \\ \hline
+			\end{tabular}%
+		}
+	\end{table}
+	
 	\subsubsection{Traceability Matrix}
 	\begin{table}[ht!]
 		\centering
